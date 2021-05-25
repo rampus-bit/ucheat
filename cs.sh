@@ -15,10 +15,12 @@ CYAN="\e[36m"
 GRAY="\e[90m"
 WHITE="\e[97m"
 
+LIGHTBLUE="\e[94m"
+
 END="\e[0m"
 
 # i3 CS
-echo "i3 Cheat-Sheet:"
+echo -e "${LIGHTBLUE}i3 Cheat-Sheet:${END}"
 if [[ -f "$HOME/.config/i3/config" ]]
 then
 	grep bindsym $HOME/.config/i3/config | awk {'print $2 " " $3 "--- " $4 $7'} | sed 's/exec//g' | sed 's/$mod/MOD /g' | column
@@ -31,7 +33,7 @@ echo
 echo "Qtile Cheat-Sheet:"
 if [[ -f "$HOME/.config/qtile/config.py" ]]
 then
-	grep bindsym $HOME/.config/i3/config | awk {'print $2 " " $3 "--- " $4 $7'} | sed 's/exec//g' | sed 's/$mod/MOD /g' | column
+	grep Key $HOME/.config/qtile/config.py | awk {'print $2 "" $3 "--- " $4 $7'} | column
 else
 	echo "You seem to not have Qtile installed"
 fi
@@ -49,6 +51,7 @@ fi
 echo
 
 echo -e "${RED}THIS IS SOME RED TEXT${END}"
+echo -e "${GRAY}THIS IS SOME YELLOW TEXT${END}"
 
 # Old Code
 # grep XK_ $HOME/.config/suckless/dwm/config.def.h | awk {'print $2 $3 $4 $7'}
