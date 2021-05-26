@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Variables
+# Probably Redundant Variables
 # i3CS=$(grep bindsym $HOME/.config/i3/config | awk {'print $2 " " $3 "--- " $4 $7'} | sed 's/exec//g' | sed 's/$mod/MOD /g' | column)
 # QtileCS=$(grep Key $HOME/.config/qtile/config.py | awk {'print $2 "" $3 "--- " $4 $7'} | column)
 # DWMCS=$(grep -s XK_ $Home/.config/suckless/dwm/config.def.h | awk {'print $2 $3 $4 $7'})
