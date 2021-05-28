@@ -32,7 +32,6 @@ i3_CS() {
 
 i3_CS
 
-
 # Qtile CS
 qtile_CS() {
 	echo
@@ -60,7 +59,6 @@ DWM_CS() {
 }
 
 DWM_CS
-
 
 # Old Code
 # grep XK_ $HOME/.config/suckless/dwm/config.def.h | awk {'print $2 $3 $4 $7'}
