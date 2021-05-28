@@ -1,4 +1,7 @@
 #!/bin/bash
+#Script by Alden Garcia
+#Verson 1.0.0
+#https://github.com/rampus-bit
 
 # Probably Redundant Variables
 # i3CS=$(grep bindsym $HOME/.config/i3/config | awk {'print $2 " " $3 "--- " $4 $7'} | sed 's/exec//g' | sed 's/$mod/MOD /g' | column)
