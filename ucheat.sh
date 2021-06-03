@@ -8,6 +8,9 @@
 # QtileCS=$(grep Key $HOME/.config/qtile/config.py | awk {'print $2 "" $3 "--- " $4 $7'} | column)
 # DWMCS=$(grep -s XK_ $Home/.config/suckless/dwm/config.def.h | awk {'print $2 $3 $4 $7'})
 
+# Variables
+WM=$DESKTOP_SESSION
+
 # Colors
 RED="\e[31m"
 GREEN="\e[32m"
@@ -22,6 +25,14 @@ LIGHTBLUE="\e[94m"
 
 END="\e[0m"
 
+
+i3_fetch() {
+	if [[ $WM = i3 ]]
+	then
+		echo $i3_result
+	fi
+}
+
 # i3 CS
 i3_CS() {
 	echo -e "${LIGHTBLUE}i3 Cheat-Sheet:${END}"
@@ -33,11 +44,11 @@ i3_CS() {
 	fi
 }
 
-i3_CS
+i3_result="$(i3_CS)"
+echo $i3_result
 
 # Qtile CS
 qtile_CS() {
-	echo
 	echo -e "${GREEN}Qtile Cheat-Sheet:${END}"
 	if [[ -f "$HOME/.config/qtile/config.py" ]]
 	then
@@ -47,8 +58,6 @@ qtile_CS() {
 	fi
 	echo
 }
-
-qtile_CS
 
 #DWM CS
 DWM_CS() {
