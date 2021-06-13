@@ -24,7 +24,7 @@ if [[ $WM = i3 ]]
 if [[ $WM = qtile ]]
 	then
 		echo -e "${LIGHTBLUE}Qtile Cheat-Sheet:${END}"
-		grep Key $HOME/.config/qtile/config.py | awk {'print $2 " " $3 " --- " $4 $7'} | sed 's/$mod/MOD/g' | sed 's/+/ + /g' | sed 's/exec//g' | column
+		grep Key $HOME/.config/qtile/config.py | awk {'print $1 " " $2 $3 $4'} | sed 's/Key//g'| sed 's/([mod])/MOD/g' | sed 's/([alt])/Alt/g' |sed 's/from libqtile.configimportClick,//g' | sed 's/exec//g' | column
 	fi
 
 # Bspwm CS
