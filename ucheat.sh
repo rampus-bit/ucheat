@@ -3,76 +3,36 @@
 #Verson 1.0.0
 #https://github.com/rampus-bit
 
-# Probably Redundant Variables
-# i3CS=$(grep bindsym $HOME/.config/i3/config | awk {'print $2 " " $3 "--- " $4 $7'} | sed 's/exec//g' | sed 's/$mod/MOD /g' | column)
-# QtileCS=$(grep Key $HOME/.config/qtile/config.py | awk {'print $2 "" $3 "--- " $4 $7'} | column)
-# DWMCS=$(grep -s XK_ $Home/.config/suckless/dwm/config.def.h | awk {'print $2 $3 $4 $7'})
-
 # Variables
 WM=$DESKTOP_SESSION
 
 # Colors
 RED="\e[31m"
-GREEN="\e[32m"
-YELLOW="\e[33m"
-BLUE="\e[34m"
-MAGENTA="\e[35m"
-CYAN="\e[36m"
-GRAY="\e[90m"
-WHITE="\e[97m"
 
 LIGHTBLUE="\e[94m"
 
 END="\e[0m"
 
-
-i3_fetch() {
-	if [[ $WM = i3 ]]
-	then
-		echo $i3_result
-	fi
-}
-
 # i3 CS
-i3_CS() {
-	echo -e "${LIGHTBLUE}i3 Cheat-Sheet:${END}"
-	if [[ -f "$HOME/.config/i3/config" ]]
+if [[ $WM = i3 ]]
 	then
+		echo -e "${LIGHTBLUE}i3 Cheat-Sheet:${END}"
 		grep bindsym $HOME/.config/i3/config | awk {'print $2 " " $3 " --- " $4 $7'} | sed 's/$mod/MOD/g' | sed 's/+/ + /g' | sed 's/exec//g' | column
-	else
-		echo "You seem to not have i3 installed."
 	fi
-}
-
-i3_result="$(i3_CS)"
-echo $i3_result
 
 # Qtile CS
-qtile_CS() {
-	echo -e "${GREEN}Qtile Cheat-Sheet:${END}"
-	if [[ -f "$HOME/.config/qtile/config.py" ]]
+if [[ $WM = qtile ]]
 	then
-		grep Key $HOME/.config/qtile/config.py | awk {'print $2 "" $3 "--- " $4 $7'} | column
-	else
-		echo "You seem to not have Qtile installed."
+		echo -e "${LIGHTBLUE}Qtile Cheat-Sheet:${END}"
+		grep Key $HOME/.config/qtile/config.py | awk {'print $2 " " $3 " --- " $4 $7'} | sed 's/$mod/MOD/g' | sed 's/+/ + /g' | sed 's/exec//g' | column
 	fi
-	echo
-}
 
-#DWM CS
-DWM_CS() {
-	echo -e "${GRAY}DWM Cheat-Sheet:${END}"
-	if [[ -f "$HOME/.config/suckless/dwm/config.def.h" ]]
+# Bspwm CS
+if [[ $WM = bspwm ]]
 	then
-		echo $DWMCS
-	else
-		echo "You seem to not have DWM installed."
+		echo -e "${LIGHTBLUE}Bspwm Cheat-Sheet:${END}"
+		grep bindsym $HOME/.config/i3/config | awk {'print $2 " " $3 " --- " $4 $7'} | sed 's/$mod/MOD/g' | sed 's/+/ + /g' | sed 's/exec//g' | column
 	fi
-}
 
-DWM_CS
-
-# Old Code
-# grep XK_ $HOME/.config/suckless/dwm/config.def.h | awk {'print $2 $3 $4 $7'}
-# grep bindsym $HOME/.config/i3/config | awk {'print $2 " " $3 "--- " $4 $7'} | sed 's/exec//g' | sed 's/$mod/MOD /g' | column
-# grep Key $HOME/.config/qtile/config.py | awk {'print $2 "" $3 "--- " $4 $7'}
+# STORE EVERYTHING OUTSIDE OF A VARIABLE MORON, JUST CALL IT WITH
+# AN IF STATEMENT EXCLUDING THE ECHO. MASSIVE DUNCE.
