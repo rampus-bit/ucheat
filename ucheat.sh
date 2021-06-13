@@ -17,7 +17,7 @@ END="\e[0m"
 if [[ $WM = i3 ]]
 	then
 		echo -e "${LIGHTBLUE}i3 Cheat-Sheet:${END}"
-		grep bindsym $HOME/.config/i3/config | awk {'print $2 " " $3 " --- " $4 $7'} | sed 's/$mod/MOD/g' | sed 's/+/ + /g' | sed 's/exec//g' | column
+		grep bindsym $HOME/.config/i3/config | awk {'print $2 " --- " $3 $4 $7'} | sed 's/$mod/MOD/g' | sed 's/+/ + /g' | sed 's/exec//g' | column
 	fi
 
 # Qtile CS
@@ -31,7 +31,14 @@ if [[ $WM = qtile ]]
 if [[ $WM = bspwm ]]
 	then
 		echo -e "${LIGHTBLUE}Bspwm Cheat-Sheet:${END}"
-		grep bindsym $HOME/.config/i3/config | awk {'print $2 " " $3 " --- " $4 $7'} | sed 's/$mod/MOD/g' | sed 's/+/ + /g' | sed 's/exec//g' | column
+		grep super $HOME/.config/bspwm/sxhkd/sxhkdrc | awk {'print $2 " " $3 " --- " $4 $7'} | sed 's/$mod/MOD/g' | sed 's/+/ + /g' | sed 's/exec//g' | column
+	fi
+
+# DWM CS
+if [[ $WM = dwm ]]
+	then
+		echo -e "${LIGHTBLUE}DWM Cheat-Sheet:${END}"
+		grep MODKEY $HOME/.config/suckless/dwm/config.def.h | awk {'print $2 " " $3 " --- " $4 $7'} | sed 's/$mod/MOD/g' | sed 's/+/ + /g' | sed 's/exec//g' | column
 	fi
 
 # STORE EVERYTHING OUTSIDE OF A VARIABLE MORON, JUST CALL IT WITH
