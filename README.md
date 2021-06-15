@@ -1,6 +1,6 @@
 <h3 align="center"><img src="https://cdn.discordapp.com/attachments/755119979786928369/854491946259972106/ucheat.png" height="100px"></h3>
-# ucheat
-A command line cheat-sheet tool applicable for most window managers.
+
+<p align="center">💿 A command line cheat-sheet tool applicable for most window managers.</p>
 
 ### What is it?
 Ucheat is a command line utility for displaying the keybindings on a window manager, custom or not. It has the capability to display all kinds,
