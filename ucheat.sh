@@ -5,7 +5,7 @@
 
 # Variables
 WM=$DESKTOP_SESSION
-
+Editor=$EDITOR
 # Colors
 RED="\e[31m"
 
@@ -17,7 +17,7 @@ END="\e[0m"
 if [[ $WM = i3 ]]
 	then
 		echo -e "${LIGHTBLUE}i3 Cheat-Sheet:${END}"
-		grep bindsym $HOME/.config/i3/config | awk {'print $2 " --- " $3 $4 $7'} | sed 's/$mod/MOD/g' | sed 's/+/ + /g' | sed 's/exec//g' | column
+		grep bindsym $HOME/.config/i3/config | awk {'print $2 " ~ " $3 $4 $7'} | sed 's/$mod/MOD/g' | sed 's/+/ + /g' | sed 's/exec//g' | column
 	fi
 
 # Qtile CS
@@ -40,6 +40,16 @@ if [[ $WM = dwm ]]
 		echo -e "${LIGHTBLUE}DWM Cheat-Sheet:${END}"
 		grep MODKEY $HOME/.config/suckless/dwm/config.def.h | awk {'print $2 " " $3 " --- " $4 $7'} | sed 's/$mod/MOD/g' | sed 's/+/ + /g' | sed 's/exec//g' | column
 	fi
+
+	# Possible features to implement:
+if [[ $Editor = vim ]]
+	then
+		echo "Good job, don't use Emacs."
+	else
+		echo "Never use emacs, use Vim instead."
+	fi
+
+read
 
 # STORE EVERYTHING OUTSIDE OF A VARIABLE MORON, JUST CALL IT WITH
 # AN IF STATEMENT EXCLUDING THE ECHO. MASSIVE DUNCE. OR DON'T, YOU
