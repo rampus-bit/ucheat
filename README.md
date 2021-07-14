@@ -9,4 +9,4 @@ and even with psuedo syntax highlighting. It functions similarly to the cheatshe
 ### How does it work?
 It basically checks for a window manager config file, and greps any applicable information within it. Currently, it has support for i3, and qtile. I hope to add functionality for other WM's as well.
 
-<h3 align="center"><img src="https://cdn.discordapp.com/attachments/800771771291664435/864947251158450186/ucheat.png" height="100px"></h3>
+<h3 align="right"><img src="https://cdn.discordapp.com/attachments/800771771291664435/864947251158450186/ucheat.png" height="1000px"></h3>
