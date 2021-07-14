@@ -2,11 +2,11 @@
 
 <p align="center">🌎 A command line cheat-sheet tool applicable for most window managers.</p>
 
-<p align="right">### What is it?
-Ucheat is a command line utility for displaying the keybindings on a window manager, custom or not. It has the capability to display all kinds,
-and even with psuedo syntax highlighting. It functions similarly to the cheatsheets built into window managers such as Awesome, or XMonad.
+### What is it?
+<p align="left">Ucheat is a command line utility for displaying the keybindings on a window manager, custom or not. It has the capability to display all kinds,
+and even with psuedo syntax highlighting. It functions similarly to the cheatsheets built into window managers such as Awesome, or XMonad.</p>
 
 ### How does it work?
-It basically checks for a window manager config file, and greps any applicable information within it. Currently, it has support for i3, and qtile. I hope to add functionality for other WM's as well.</p>
+<p align="left">It basically checks for a window manager config file, and greps any applicable information within it. Currently, it has support for i3, and qtile. I hope to add functionality for other WM's as well.</p>
 
 <h3 align="right"><img src="https://cdn.discordapp.com/attachments/800771771291664435/864947251158450186/ucheat.png" height="200px"></h3>
