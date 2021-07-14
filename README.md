@@ -10,3 +10,6 @@ and even with psuedo syntax highlighting. It functions similarly to the cheatshe
 
 ### How does it work?
 <p align="left">It basically checks for a window manager config file, and greps any applicable information within it. Currently, it has support for i3, and qtile. I hope to add functionality for other WM's as well.</p>
+
+### Disincluded Content:
+The picture shown above are some of the hotkeys I have in my personal i3 config, which you can view [here](https://github.com/rampus-bit/dots/tree/main/i3). Given the current image is only a portion of my hotkeys, there are obviously several others I haven't included.
