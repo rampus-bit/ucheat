@@ -11,4 +11,4 @@
 <p align="left">It basically checks for a window manager config file, and greps any applicable information within it. Currently, it has support for i3, and qtile. I hope to add functionality for other WM's as well.</p>
 
 ### Excluded content:
-The picture shown above contains some of my personal hotkeys, which you can view [here](https://github.com/rampus-bit/dots/tree/main/i3). Given the current image is only a portion of my hotkeys, there are obviously several others I haven't included.
+The picture shown above contains some of my personal hotkeys, which you can view [here](https://github.com/rampus-bit/dots/blob/main/i3/config). Given the current image is only a portion of my hotkeys, there are obviously several others I haven't included.
